@@ -33,9 +33,9 @@ console.log(student.profile.city);
 // student.mentionName();
 // student.mentionSkills();
 
-// for (var key in student) {
-//   console.log(key + ': ' + student[key]);
-// }
+for (var key in student) {
+  console.log(key + ': ' + student[key]);
+}
 
 // lanjutkan
 
@@ -67,66 +67,66 @@ console.log(student.profile.city);
 // };
 // vokal.a();
 
-// function countVomels(str) {
-//   var result = {
-//     a: 0,
-//     i: 0,
-//     u: 0,
-//     e: 0,
-//     o: 0,
-//   };
-
-//   for (var i = 0; i < str.length; i++) {
-//     if (str[i] === 'a') {
-//       result.a++;
-//     } else if (str[i] === 'i') {
-//       result.i++;
-//     } else if (str[i] === 'u') {
-//       result.u++;
-//     } else if (str[i] === 'e') {
-//       result.e++;
-//     } else if (str[i] === 'o') {
-//       result.o++;
-//     }
-//   }
-//   return result;
-// }
-
-// console.log(countVomels('Buka puasa bersama teman kuliah'));
-
-function countVotes(votes) {
+function countVomels(str) {
   var result = {
-    dwi: 0,
-    keiza: 0,
-    malika: 0,
+    a: 0,
+    i: 0,
+    u: 0,
+    e: 0,
+    o: 0,
   };
-  for (var i = 0; i < votes.length; i++) {
-    if (votes[i] === 'dwi') {
-      result.dwi++;
-    } else if (votes[i] === 'keiza') {
-      result.keiza++;
-    } else if (votes[i] === 'malika') {
-      result.malika++;
+
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === 'a') {
+      result.a++;
+    } else if (str[i] === 'i') {
+      result.i++;
+    } else if (str[i] === 'u') {
+      result.u++;
+    } else if (str[i] === 'e') {
+      result.e++;
+    } else if (str[i] === 'o') {
+      result.o++;
     }
   }
   return result;
 }
 
-function voteWin(votes) {
-  var voteCounts = countVotes(votes);
+console.log(countVomels('Buka puasa bersama teman kuliah'));
 
-  var winner = '';
-  var winnerScore = 0;
+// function countVotes(votes) {
+//   var result = {
+//     dwi: 0,
+//     keiza: 0,
+//     malika: 0,
+//   };
+//   for (var i = 0; i < votes.length; i++) {
+//     if (votes[i] === 'dwi') {
+//       result.dwi++;
+//     } else if (votes[i] === 'keiza') {
+//       result.keiza++;
+//     } else if (votes[i] === 'malika') {
+//       result.malika++;
+//     }
+//   }
+//   return result;
+// }
 
-  for (var key in voteCounts) {
-    if (voteCounts[key] > winnerScore) {
-      winnerScore = voteCounts[key];
-      winner = key;
-    }
-  }
-  return winner + ' menang dengan ' + winnerScore + ' suara.';
-}
-console.log(voteWin(['dwi', 'dwi', 'keiza', 'malika']));
+// function voteWin(votes) {
+//   var voteCounts = countVotes(votes);
+
+//   var winner = '';
+//   var winnerScore = 0;
+
+//   for (var key in voteCounts) {
+//     if (voteCounts[key] > winnerScore) {
+//       winnerScore = voteCounts[key];
+//       winner = key;
+//     }
+//   }
+//   return winner + ' menang dengan ' + winnerScore + ' suara.';
+// }
+// console.log(voteWin(['dwi', 'dwi', 'keiza', 'malika']));
 
 // var items = [
 //   {
