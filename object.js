@@ -1,41 +1,41 @@
-var student = {
-  name: 'dwi',
-  gpa: 4.0,
-  isGraduated: true,
-  skills: ['js', 'c', 'python', 'java'],
-  profile: {
-    address: 'palembang',
-    city: 'palembang',
-  },
-  'able to code': 'yes',
-  100: 1,
+// var student = {
+//   name: 'dwi',
+//   gpa: 4.0,
+//   isGraduated: true,
+//   skills: ['js', 'c', 'python', 'java'],
+//   profile: {
+//     address: 'palembang',
+//     city: 'palembang',
+//   },
+//   'able to code': 'yes',
+//   100: 1,
 
-  mentionName: function () {
-    console.log('My name is ' + this.name);
-  },
-  mentionSkills: function () {
-    console.log('My skills are : ');
-    for (var i = 0; i < this.skills.length; i++) {
-      console.log(i + 1 + '. ' + this.skills[i]);
-    }
-  },
-};
+//   mentionName: function () {
+//     console.log('My name is ' + this.name);
+//   },
+//   mentionSkills: function () {
+//     console.log('My skills are : ');
+//     for (var i = 0; i < this.skills.length; i++) {
+//       console.log(i + 1 + '. ' + this.skills[i]);
+//     }
+//   },
+// };
 
-console.log(student.name);
-console.log(student.gpa);
-console.log(student['isGraduated']);
-console.log(student['able to code']);
-console.log(student['100']);
-console.log(student.skills);
-console.log(student.profile.address);
-console.log(student.profile.city);
+// console.log(student.name);
+// console.log(student.gpa);
+// console.log(student['isGraduated']);
+// console.log(student['able to code']);
+// console.log(student['100']);
+// console.log(student.skills);
+// console.log(student.profile.address);
+// console.log(student.profile.city);
 
-// student.mentionName();
-// student.mentionSkills();
+// // student.mentionName();
+// // student.mentionSkills();
 
-for (var key in student) {
-  console.log(key + ': ' + student[key]);
-}
+// for (var key in student) {
+//   console.log(key + ': ' + student[key]);
+// }
 
 // lanjutkan
 
@@ -128,52 +128,52 @@ for (var key in student) {
 // }
 // console.log(voteWin(['dwi', 'dwi', 'keiza', 'malika']));
 
-// var items = [
-//   {
-//     id: 1,
-//     name: 'asus',
-//     price: 15000000,
-//     stock: 10,
-//     isAvailable: true,
-//   },
-//   {
-//     id: 2,
-//     name: 'dell',
-//     price: 10000000,
-//     stock: 10,
-//     isAvailable: true,
-//   },
-//   {
-//     id: 3,
-//     name: 'acer',
-//     price: 5000000,
-//     stock: 10,
-//     isAvailable: true,
-//   },
-// ];
+var items = [
+  {
+    id: 1,
+    name: 'asus',
+    price: 15000000,
+    stock: 10,
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    name: 'dell',
+    price: 10000000,
+    stock: 10,
+    isAvailable: true,
+  },
+  {
+    id: 3,
+    name: 'acer',
+    price: 5000000,
+    stock: 10,
+    isAvailable: true,
+  },
+];
 
-// function itemsList() {
-//   console.log('item list: ');
-//   for (var i = 0; i < items.length; i++) {
-//     console.log(items[i].id + '. ' + items[i].name);
-//   }
-// }
+function itemsList() {
+  console.log('item list: ');
+  for (var i = 0; i < items.length; i++) {
+    console.log(items[i].id + '. ' + items[i].name);
+  }
+}
 
-// function addItem(name, price, stock) {
-//   var id = items[items.length - 1].id + 1;
-//   var isAvailable = true;
+function addItem(name, price, stock) {
+  var id = items[items.length - 1].id + 1;
+  var isAvailable = true;
 
-//   var tempObj = {
-//     id,
-//     name,
-//     price,
-//     stock,
-//     isAvailable,
-//   };
+  var tempObj = {
+    id,
+    name,
+    price,
+    stock,
+    isAvailable,
+  };
 
-//   items.push(tempObj);
-// }
+  items.push(tempObj);
+}
 
-// addItem('lenovo', 2000000, 5);
-// addItem('dell', 21000000, 25);
-// itemsList();
+addItem('lenovo', 2000000, 5);
+addItem('dell', 21000000, 25);
+itemsList();
