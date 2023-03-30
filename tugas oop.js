@@ -28,16 +28,12 @@ class Strawberry extends Cookie {
 }
 
 let chocolate = new Chocolate(1, 'Black Forest', 15000, 'sugar', 'chocolate');
-let sweet = new Sweet(2, 'Lapis Legit', 15000, 'Carbo', 'sweet');
+let sweet = new Sweet(2, 'Lapis Legit', 15000, 'carbo', 'sweet');
 let strawberry = new Strawberry(3, 'Strawberry cheesecake', 100000, 'protein', 'fruit');
 
-console.log(chocolate);
-console.log(sweet);
-console.log(strawberry);
-
 class Kitchen {
-  constructor(cookies) {
-    this.container = this.container || [];
+  constructor(container) {
+    this.container = container || [];
   }
   bake(name, price, ingredients, type) {
     let id = 1;
@@ -49,10 +45,10 @@ class Kitchen {
         this.container.push(new Chocolate(id, name, price, ingredients, type, false, []));
         break;
       case 'sweet':
-        this.container.push(new Sweet(id, name, type, price, false, []));
+        this.container.push(new Sweet(id, name, price, ingredients, type, false, []));
         break;
-      case 'strawberry':
-        this.container.push(new Strawberry(id, name, type, price, false, []));
+      case 'fruit':
+        this.container.push(new Strawberry(id, name, price, ingredients, type, false, []));
         break;
 
       default:
@@ -63,21 +59,29 @@ class Kitchen {
   eat(id) {
     this.container = this.container.filter((cookies) => cookies.id !== id);
   }
-  // addSugar(id) {
-  //   console.log('Change the taste of cookies');
-  // }
+  addSugar(id, isSweet) {
+    this.container = this.container.map((cookies) => {
+      if (cookies.id === id) {
+        cookies.isSweet = isSweet;
+      }
+      return cookies;
+    });
+  }
 
   showCookies() {
     console.log('Cookies Available: ');
     this.container.forEach((cookies, index) => {
-      console.log(`${index + 1}. ${cookies.name}, ${cookies.type}, RP. ${cookies.price}`);
+      console.log(`${index + 1}. ${cookies.name}, RP. ${cookies.price}, ${cookies.type}, ${cookies.isSweet}`);
     });
   }
 }
 
 const kitchen = new Kitchen();
 kitchen.bake('wafer', 7000, 'carbo', 'chocolate');
-// kitchen.eat(1);
+kitchen.bake('Jus Apel', 15000, 'fruit', 'fruit');
+kitchen.bake('lapis', 27000, 'protein', 'sweet');
+// kitchen.eat(2);
+kitchen.addSugar(2, true);
 kitchen.showCookies();
 
 // console.log(kitchen.container);

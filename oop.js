@@ -26,13 +26,13 @@ class Sport extends Vehicle {
   }
 }
 
-let sedan = new Sedan(1, 'grand vitara', 'suv', 10000, 'suzuki');
-let truck = new Truck(2, 'fuso', 'truk', 15000, 'mitsubishi');
-let sport = new Sport(3, 's class', 'monster', 100000, 'mercedes');
+let sedan = new Sedan(1, 'Honda City', 'sedan', 5000, 'Honda');
+let truck = new Truck(2, 'Colt Pickup', 'truck', 5000, 'colt');
+let sport = new Sport(3, 'Pajero', 'sport', 10000, 'Mitsubishi');
 
-// console.log(sedan);
-// console.log(truck);
-// console.log(sport);
+// console.log(sedan)
+// console.log(truck)
+// console.log(sport)
 
 class Showroom {
   constructor(rooms) {
@@ -40,18 +40,19 @@ class Showroom {
   }
 
   showVehicles() {
-    console.log('Vehicles list: ');
+    // untuk menampilkan vehicles
+    console.log('Vehicle List: ');
     this.rooms.forEach((room, index) => {
-      console.log(`${index + 1}. ${room.name}, ${room.type}, RP. ${room.price}`);
+      console.log(`${index + 1}. ${room.name}, RP. ${room.price}`);
     });
   }
-
   addVehicle(name, type, price) {
-    // utnuk emnambahkan
+    // untuk menambahkan
     let id = 1;
     if (this.rooms.length !== 0) {
       id = this.rooms[this.rooms.length - 1].id + 1;
     }
+
     switch (type) {
       case 'sedan':
         this.rooms.push(new Sedan(id, name, type, price, false, []));
@@ -62,12 +63,8 @@ class Showroom {
       case 'sport':
         this.rooms.push(new Sport(id, name, type, price, false, []));
         break;
-
-      default:
-        break;
     }
   }
-
   updateVehicle(id, name) {
     this.rooms = this.rooms.map((room) => {
       if (room.id === id) {
@@ -83,8 +80,8 @@ class Showroom {
 
 const showroom = new Showroom();
 
-showroom.addVehicle('jimny', 'sport', 5000);
-showroom.addVehicle('colt', 'truck', 15000);
-showroom.addVehicle('porche', 'sedan', 25000);
+showroom.addVehicle('Toyota Raize', 'sport', 5000);
+showroom.addVehicle('Colt', 'truck', 5000);
+showroom.addVehicle('Honda Brio', 'sedan', 3500);
 showroom.showVehicles();
 console.log(showroom.rooms);
