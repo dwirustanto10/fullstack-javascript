@@ -60,21 +60,24 @@ class Kitchen {
     }
   }
 
-  // eat() {
-  //   console.log('Delete cookies in the container:');
-  // }
-  // addSugar() {
+  eat(id) {
+    this.container = this.container.filter((cookies) => cookies.id !== id);
+  }
+  // addSugar(id) {
   //   console.log('Change the taste of cookies');
   // }
 
-  // showCookies() {
-  //   console.log('Cookies Available: ');
-  //   this.container.forEach((cookies, index) => {
-  //     console.log(`${index + 1}. ${cookies.name}, ${cookies.type}, RP. ${cookies.price}`);
-  //   });
-  // }
+  showCookies() {
+    console.log('Cookies Available: ');
+    this.container.forEach((cookies, index) => {
+      console.log(`${index + 1}. ${cookies.name}, ${cookies.type}, RP. ${cookies.price}`);
+    });
+  }
 }
 
 const kitchen = new Kitchen();
 kitchen.bake('wafer', 7000, 'carbo', 'chocolate');
-console.log(Kitchen.container);
+// kitchen.eat(1);
+kitchen.showCookies();
+
+// console.log(kitchen.container);
