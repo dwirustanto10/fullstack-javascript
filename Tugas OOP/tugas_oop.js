@@ -3,8 +3,8 @@ class Cookie {
     this.id = id;
     this.name = name;
     this.price = price;
-    this.ingredients = ingredients;
-    this.type = type || [];
+    this.ingredients = ingredients || [];
+    this.type = type;
   }
 }
 
