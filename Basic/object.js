@@ -1,25 +1,25 @@
-// var student = {
-//   name: 'dwi',
-//   gpa: 4.0,
-//   isGraduated: true,
-//   skills: ['js', 'c', 'python', 'java'],
-//   profile: {
-//     address: 'palembang',
-//     city: 'palembang',
-//   },
-//   'able to code': 'yes',
-//   100: 1,
+var student = {
+  name: 'dwi',
+  gpa: 4.0,
+  isGraduated: true,
+  skills: ['js', 'c', 'python', 'java'],
+  profile: {
+    address: 'palembang',
+    city: 'palembang',
+  },
+  'able to code': 'yes',
+  100: 1,
 
-//   mentionName: function () {
-//     console.log('My name is ' + this.name);
-//   },
-//   mentionSkills: function () {
-//     console.log('My skills are : ');
-//     for (var i = 0; i < this.skills.length; i++) {
-//       console.log(i + 1 + '. ' + this.skills[i]);
-//     }
-//   },
-// };
+  mentionName: function () {
+    console.log('My name is ' + this.name);
+  },
+  mentionSkills: function () {
+    console.log('My skills are : ');
+    for (var i = 0; i < this.skills.length; i++) {
+      console.log(i + 1 + '. ' + this.skills[i]);
+    }
+  },
+};
 
 // console.log(student.name);
 // console.log(student.gpa);
