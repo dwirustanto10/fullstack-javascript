@@ -74,5 +74,51 @@ class Kitchen {
       return cookie;
     });
   }
+
+  categoriesCookieByIngredient(ingredientName) {
+    let tempCookie = [];
+    this.container.forEach((cookie) => {
+      const { name, ingredients } = cookie;
+      ingredients.forEach((ing) => {
+        if (ing === ingredientName) {
+          tempCookie.push(name);
+        }
+      });
+    });
+
+    console.log(`Cookies with ${ingredientName} ingredients: `);
+    tempCookie.forEach((cookie, i) => {
+      console.log(`${i + 1}. ${cookie}`);
+    });
+    // console.log(tempCookie);
+  }
+
+  sortCookies(type) {
+    let temp = {};
+    let container = [...this.container];
+
+    if (type === 'desc') {
+      for (let i = 0; i < container.length; i++) {
+        for (let j = 0; j <= i; j++) {
+          if (container[i].price < container[j].price) {
+            temp = container[i];
+            container[i] = container[j];
+            container[j] = temp;
+          }
+        }
+      }
+    } else if (type === 'asc') {
+      for (let i = 0; i < container.length; i++) {
+        for (let j = 0; j <= i; j++) {
+          if (container[i].price > container[j].price) {
+            temp = container[i];
+            container[i] = container[j];
+            container[j] = temp;
+          }
+        }
+      }
+    }
+    console.log(container);
+  }
 }
 module.exports = Kitchen;
