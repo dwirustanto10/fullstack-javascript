@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "dwi",
+    "subject": "math",
+    "age": 40,
+    "city": "salatiga"
+  },
+
+  {
+    "id": 2,
+    "name": "reni",
+    "subject": "calculus",
+    "age": 41,
+    "city": "palembang"
+  },
+  {
+    "id": 3,
+    "name": "rustanto",
+    "subject": "object",
+    "age": 35,
+    "city": "aceh"
+  },
+  {
+    "id": 4,
+    "name": "mas dwi",
+    "subject": "big data",
+    "age": 30,
+    "city": "solo"
+  }
+]

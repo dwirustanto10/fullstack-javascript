@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "Keiza",
+    "category": "Manager",
+    "max_salary": 100000000,
+    "min_salary": 10000000
+  }
+]

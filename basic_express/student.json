@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "keiza",
+      "major": "Tech",
+      "semester": 5,
+      "city": "palembang"
+    }
+    
+    {
+      "id": 2,
+      "name": "maliqa",
+      "major": "healthy",
+      "semester": 2,
+      "city": "palembang"
+    }
+]
