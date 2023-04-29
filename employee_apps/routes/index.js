@@ -1,7 +1,7 @@
 const route = require('express').Router();
 
 route.get('/', (req, res) => {
-  res.send('Hello World! My Bos');
+  res.send('Welcome to the my Employee app');
 });
 
 const employeeRoute = require('./employee');
