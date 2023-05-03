@@ -55,15 +55,27 @@ class Lecturer {
       this.getAllLecturers()
         .then((result) => {
           let lecturers = result;
-          const { id, name, subject, age, city } = lecturer;
+          const id = lecturers[lecturers.length - 1].id + 1;
+          const { name, subject, age, city } = lecturer;
 
-          lecturers.push(new Lecturer(id, name, subject, age, city));
-          console.log(lecturers);
+          let lecturerClass = new Lecturer(id, name, subject, age, city);
+          lecturers.push(lecturerClass);
+
+          this.save(lecturers);
+          resolve(lecturerClass);
         })
         .catch((err) => {
           reject(err);
         });
     });
+  }
+
+  static delete(req, res) {}
+
+  static update(req, res) {}
+
+  static save(lecturers) {
+    fs.writeFileSync('./lectures.json', JSON.stringify(lecturers, null, 3));
   }
 }
 

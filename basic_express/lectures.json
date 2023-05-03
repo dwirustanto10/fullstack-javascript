@@ -6,7 +6,6 @@
     "age": 40,
     "city": "salatiga"
   },
-
   {
     "id": 2,
     "name": "reni",
@@ -27,5 +26,19 @@
     "subject": "big data",
     "age": 30,
     "city": "solo"
+  },
+  {
+    "id": 5,
+    "name": "yudistira",
+    "subject": "almukarom",
+    "age": 17,
+    "city": "Palembang"
+  },
+  {
+    "id": 6,
+    "name": "bazia",
+    "subject": "AI",
+    "age": 15,
+    "city": "Palembang"
   }
 ]
