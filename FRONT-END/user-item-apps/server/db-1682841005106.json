@@ -1,0 +1,38 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Mr Dwi",
+      "hobby": "Belajar"
+    },
+    {
+      "id": 2,
+      "name": "Reni",
+      "hobby": "Happy Shopping"
+    },
+    {
+      "id": 3,
+      "name": "Keiza",
+      "hobby": "Religi"
+    },
+    {
+      "id": 4,
+      "name": "Malika",
+      "hobby": "Art"
+    },
+    {
+      "id": 5,
+      "name": "Ciku",
+      "hobby": "Mengeong"
+    }
+  ],
+  "item": [
+    {
+      "id": 1,
+      "name": "beras",
+      "type": "biji",
+      "price": 15000,
+      "stock": 25
+    }
+  ]
+}

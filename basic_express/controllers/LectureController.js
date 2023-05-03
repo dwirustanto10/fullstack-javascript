@@ -15,7 +15,15 @@ class LecturerController {
   }
 
   static create(req, res) {
+    console.log(req.body);
     res.send('Create Lecturer page');
+    Lecturer.create(req.body)
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(er);
+      });
   }
   static getHistory(req, res) {
     const id = Number(req.params.id);

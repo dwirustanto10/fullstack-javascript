@@ -1,5 +1,6 @@
 // const { rejects } = require('assert');
 const fs = require('fs');
+const { resolve } = require('path');
 // const { resolve } = require('path');
 
 class Lecturer {
@@ -42,6 +43,22 @@ class Lecturer {
               message: `Lecturer with id ${id} is not found!`,
             };
           }
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static create(lecturer) {
+    return new Promise((resolve, reject) => {
+      this.getAllLecturers()
+        .then((result) => {
+          let lecturers = result;
+          const { id, name, subject, age, city } = lecturer;
+
+          lecturers.push(new Lecturer(id, name, subject, age, city));
+          console.log(lecturers);
         })
         .catch((err) => {
           reject(err);
